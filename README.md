@@ -14,22 +14,7 @@ The anatomical substrate is **MaleCNS v1.0**, covering the adult male *Drosophil
 
 FlyLM-2 extends the earlier byte-level, graded-dynamics model with **SentencePiece Unigram tokenization and mixed graded/spiking neuronal dynamics**. It preserves the graph, anatomical input/output selection, dialogue-level data split, and response-only training objective.
 
-```mermaid
-flowchart LR
-    T[SentencePiece token] --> E[Shared embedding]
-    E --> I[Linear sensory adapter]
-    I --> S[Annotated sensory neurons]
-    S --> C[MaleCNS recurrent circuit]
-    C --> M[Annotated motor neurons]
-    M --> N[Layer normalization]
-    N --> O[Linear output adapter]
-    O --> V[Tied vocabulary projection]
-    V --> P[Next-token distribution]
-    C --> H[State: v, s, a, q]
-    H --> C
-```
-
-The diagram shows the interface around the graph. Sensory and motor neurons are themselves members of that graph, and recurrent connectivity is retained. The current token's sensory drive is held constant for four simulation ticks. During generation, the prompt is processed once; subsequent predictions use the generated tokens and recurrent neural state. There is no attention mechanism, external language model, prompt reinjection, or direct token-to-logit bypass.
+Sensory and motor neurons are themselves members of that graph, and recurrent connectivity is retained. The current token's sensory drive is held constant for four simulation ticks. During generation, the prompt is processed once; subsequent predictions use the generated tokens and recurrent neural state. There is no attention mechanism, external language model, prompt reinjection, or direct token-to-logit bypass.
 
 | Property | FlyLM-1 | FlyLM-2 |
 |---|---|---|
@@ -40,20 +25,6 @@ The diagram shows the interface around the graph. Sensory and motor neurons are 
 | Training | Gradient-based sequence learning | TBPTT with surrogate gradients through spike events |
 | Control condition | Earlier graded formulation | `neuron_mode='graded_control'` disables spiking throughout the graph |
 | Checkpoint compatibility | Byte-model architecture | `malecns_mixed_sentencepiece_v2`; incompatible with byte-model checkpoints |
-
-### Repository map
-
-| File or directory | Purpose |
-|---|---|
-| [flylm-2/flylm-2-training.ipynb](flylm-2/flylm-2-training.ipynb) | Data preparation, tokenizer training, connectome extraction, dynamics, numerical checks, training, evaluation, and export |
-| [flylm-2/flylm-2-inferance.ipynb](flylm-2/flylm-2-inferance.ipynb) | Bundle loading, text generation, and anatomical activity playback; filename retains the existing spelling |
-| [flylm-2/flylm_inference.py](flylm-2/flylm_inference.py) | Standalone model construction, checkpoint loading, and generation |
-| [flylm-1/](flylm-1/) | Earlier byte-level implementation |
-| [archived/](archived/) | Earlier feasibility, dynamics, inference, and visualization experiments |
-| [documents/mushroom-body-plan.md](documents/mushroom-body-plan.md) | Proposed mushroom-body research and implementation plan |
-| [documents/mushroom-body/mb_annotation_audit.json](documents/mushroom-body/mb_annotation_audit.json) | Version-specific neuron inventory and annotation fingerprint |
-| [documents/mushroom-body/mb_neuron_inventory.csv](documents/mushroom-body/mb_neuron_inventory.csv) | Individual neuron IDs and mushroom-body role assignments |
-| [flylm-2-model/](flylm-2-model/) | Saved inference bundle; large weights and graph arrays are stored with Git LFS |
 
 ## Model specification
 
@@ -169,7 +140,7 @@ Let $E\in\mathbb{R}^{V\times d}$ be the token embedding, with default $d=32$. A 
 
 $$
 \ell(x)=E\,W_{\mathrm{out}}\,
-\operatorname{LayerNorm}(s_{\mathrm{motor}}).
+\mathrm{LayerNorm}(s_{\mathrm{motor}}).
 $$
 
 This implements input/output embedding tying. Relevant methodological references are [Ba et al. (2016)][ba2016], [Press and Wolf (2017)][press2017], and [Inan et al. (2017)][inan2017]. The readout is a compact engineered decoder; it does not reproduce biological motor behavior.
