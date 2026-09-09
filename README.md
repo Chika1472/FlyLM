@@ -8,7 +8,7 @@ The project combines three ingredients: fixed anatomical connectivity, trainable
 
 The anatomical substrate is **MaleCNS v1.0**, covering the adult male *Drosophila melanogaster* central nervous system. Its source publication is [Berg et al. (2026)][berg2026]. FlyLM uses the neurons selected by the notebook's `status == 'Traced'` filter and all released connections between them. “Full graph” throughout this README means this retained graph from the selected release, rather than every segment or every biological connection in the animal.
 
-**Research status:** FlyLM is an experimental implementation. Language competence, biological memory fidelity, and benefits over conventional language models remain empirical questions. Text-to-sensory and motor-to-token mappings are learned engineering interfaces; they do not imply that flies possess a language system. The inspected FlyLM-2 training notebook contains no saved execution outputs, so this README documents implemented behavior and planned experiments without presenting benchmark results.
+**Research status:** FlyLM is an experimental implementation. Language competence, biological memory fidelity, and benefits over conventional language models remain empirical questions. Text-to-sensory and motor-to-token mappings are learned engineering interfaces; they do not imply that flies possess a language system. The updated notebooks contain saved execution outputs, including partial training diagnostics and an inference example. These are not a completed comparative evaluation, so this README does not present them as benchmark results.
 
 ## FlyLM-2
 
@@ -20,7 +20,7 @@ Sensory and motor neurons are themselves members of that graph, and recurrent co
 |---|---|---|
 | Text representation | UTF-8 byte tokens | Train-fitted SentencePiece Unigram with byte fallback |
 | Recurrent state per neuron | Membrane `v`, synaptic signal `s`, adaptation `a` | `v`, `s`, `a`, plus refractory counter `q` |
-| Signal dynamics | Graded | Exact-type evidence selects spiking or graded dynamics; unmatched types default to graded |
+| Signal dynamics | Graded | Exact-type evidence selects spiking or graded dynamics; unmatched types default to spiking |
 | Structural substrate | Retained MaleCNS graph | Same graph-selection policy |
 | Training | Gradient-based sequence learning | TBPTT with surrogate gradients through spike events |
 | Control condition | Earlier graded formulation | `neuron_mode='graded_control'` disables spiking throughout the graph |
@@ -120,7 +120,7 @@ These numerical values are engineering assumptions. A tick is not a millisecond,
 
 ### Evidence-based activity assignment
 
-The current registry, `flylm2_activity_evidence_2026-09-08_v1`, contains four publications and six exact annotation labels:
+The current registry, `flylm2_activity_evidence_2026-09-08_v2`, contains four publications and six exact annotation labels:
 
 | MaleCNS `type` | Assigned mode | Evidence and transfer limitation |
 |---|---|---|
@@ -128,11 +128,13 @@ The current registry, `flylm2_activity_evidence_2026-09-08_v1`, contains four pu
 | `DM1_lPN` | Spiking | DM1 projection-neuron recordings in [Gouwens and Wilson (2009)][gouwens2009]; female-to-male and anatomical-label correspondence |
 | `HSN`, `HSE`, `HSS` | Graded | HS voltage recordings in [Pokusaeva et al. (2024)][pokusaeva2024]; electrical coupling studied there is absent from this model |
 | `R1-R6` | Graded | Photoreceptor voltage recordings in [Juusola et al. (2016)][juusola2016]; pooled cell-family correspondence |
-| Unmatched types | Graded default | No physiological classification established by this registry |
+| Unmatched types | Spiking default | Engineering assumption; no physiological classification established by this registry |
 
-This registry supports a model-mode choice, not transplantation of measured thresholds or time constants. No substring matching or broad neurotransmitter/class-based propagation of physiological labels is performed. Coverage and unmatched evidence types are exported for each run. A small assigned spiking population reflects limited evidence coverage, not an estimate of the fly's biological spiking population.
+This registry supports a model-mode choice, not transplantation of measured thresholds or time constants. No substring matching or broad neurotransmitter/class-based propagation of physiological labels is performed. Coverage and unmatched evidence types are exported for each run. The assigned spiking population includes both evidence-supported types and unmatched types assigned by default. Its size is not a measurement of the fly's biological spiking population; evidence coverage is reported separately.
 
-The current training mapper requires `unknown_activity='graded'`. Although inference-side configuration validation also accepts the string `'spiking'`, the checked-in constructor still creates its mask from `dynamics_ids == 2` in mixed mode. Changing that configuration string alone does not reassign unknown neurons. The saved activity codes and constructor behavior determine the effective assignment.
+The activity-assignment cell overrides the preliminary configuration with `CFG['unknown_activity'] = 'spiking'`. The mapper supports both defaults and preserves explicit graded evidence. It keeps `evidence_code=0` for unmatched types while writing their assigned execution code as `2` (spiking) in `dynamics_ids`; graded execution uses code `1`. The constructor therefore activates these unmatched neurons in mixed mode through `dynamics_ids == 2`. `neuron_mode='graded_control'` still forces every neuron to use graded dynamics. Inference restores saved execution codes rather than reassigning types from the current default.
+
+Some introductory notebook text still describes the earlier graded default. The embedded standalone export source also retains a graded-only configuration validator; the supplied inference notebook replaces that validator before loading, allowing spiking-default checkpoints. A newly exported standalone module needs the same validator compatibility change before direct use. These compatibility details do not alter the new training assignment.
 
 ### Sensory encoding and motor decoding
 
@@ -221,9 +223,9 @@ The private Korean-language dataset is not distributed in this repository. Local
 | Setting | Default |
 |---|---|
 | Target runtime | Kaggle P100, FP32 CUDA CSR |
-| Seed / batch size | `42` / `2` |
+| Seed / training batch size | `42` / `4` after the later training override (`2` in the initial configuration) |
 | TBPTT / prompt gradient tail | `64` / `32` tokens |
-| Maximum training budget | One epoch, capped at 1,000 optimizer updates |
+| Maximum training budget | One epoch, capped at 2,000 optimizer updates by the later override (initial cap: 1,000) |
 | VRAM budget fraction | `0.90` of the available/total-memory bound used by the probe |
 | Optional batch search | `batch_size='auto'`; increase tested batch sizes until the budget is exceeded |
 | Logging | Every 50 updates, plus the first update |
@@ -233,7 +235,7 @@ The private Korean-language dataset is not distributed in this repository. Local
 
 The notebook checks whether the installed PyTorch build includes `sm_60` when running on a P100. If missing, its bootstrap requests `torch==2.10.0+cu126` and matching torchvision/torchaudio packages from the official CUDA 12.6 index, then rechecks support. A kernel restart is requested only when an incompatible older module is already loaded. These are the notebook's explicit compatibility settings; see the [official PyTorch installation archive][pytorch-install]. Other dependencies include NumPy, pandas, SciPy, PyArrow, tqdm, and SentencePiece, with `sentencepiece==0.2.2` requested when that module is missing.
 
-The fixed batch is tested once; automatic batch selection is a memory-fit search, not a throughput optimum. If the graph cannot fit, execution stops rather than silently reducing the anatomical graph. Re-executing the training cell initializes a new model. Checkpoints contain model weights and provenance, but omit optimizer state and the data cursor, so exact interrupted-run resumption is not provided.
+The fixed batch is tested once; automatic batch selection is a memory-fit search, not a throughput optimum. In the updated notebook, a later cell changes the training batch from 2 to 4 and the update cap from 1,000 to 2,000 after the memory probe. That earlier probe does not establish memory fit for batch 4; rerun it with the intended training batch when validating capacity. If the graph cannot fit, execution stops rather than silently reducing the anatomical graph. Re-executing the training cell initializes a new model. Checkpoints contain model weights and provenance, but omit optimizer state and the data cursor, so exact interrupted-run resumption is not provided.
 
 ### Inference and activity playback
 
@@ -276,11 +278,11 @@ The inference notebook also records actual model `s` states for offline HTML pla
 
 The numerical checks test threshold events, reset/refractory behavior, zero-input behavior, positive finite surrogate derivatives, exact agreement with the graded recurrence when spikes are disabled, and sparse forward/backward agreement with a small dense reference. These checks establish implementation properties when run successfully; they do not establish language quality or physiological validity.
 
-The default validation subset and 1,000-update budget are execution checks. Response NLL, perplexity, and token accuracy are reported over the evaluated response tokens. Perplexity and response tokens per second are **SentencePiece-token metrics** and cannot be compared directly with byte-model values. Meaningful comparisons require a fixed held-out dialogue set, matched data exposure, multiple seeds, and separate reporting of equal-token and equal-runtime budgets. No measured throughput, memory-fit result, quality improvement, or mushroom-body benefit is asserted here.
+The default validation subset and the configured update cap are execution checks. Response NLL, perplexity, and token accuracy are reported over the evaluated response tokens. Perplexity and response tokens per second are **SentencePiece-token metrics** and cannot be compared directly with byte-model values. Meaningful comparisons require a fixed held-out dialogue set, matched data exposure, multiple seeds, and separate reporting of equal-token and equal-runtime budgets. No measured throughput, memory-fit result, quality improvement, or mushroom-body benefit is asserted here.
 
 ## Research direction: mushroom-body dynamics and plasticity
 
-The next direction is to make the mushroom body already present in MaleCNS functionally more explicit. The [mushroom-body plan](documents/mushroom-body-plan.md), dated 2026-09-09, proposes a staged program: establish neuron/type correspondence, calibrate Kenyon-cell–APL dynamics, validate spatial compartments, and only then introduce local dopamine-dependent plasticity. These are **planned extensions**, not implemented FlyLM-2 capabilities.
+The next direction is to make the mushroom body already present in MaleCNS functionally more explicit. The [mushroom-body plan](documents/mushroom-body-plan.md), dated 2026-09-09, proposes a staged program: establish neuron/type correspondence, calibrate Kenyon-cell–APL dynamics, validate spatial compartments, and only then introduce local dopamine-dependent plasticity. These are **planned extensions**, not implemented FlyLM-2 capabilities. The plan predates the spiking-default revision and describes the earlier graded baseline. Its future APL assignment remains a literature-supported graded model; the current unmatched-type fallback does not change that physiological motivation.
 
 ### Existing anatomical inventory
 
@@ -295,7 +297,7 @@ The checked-in annotation audit reports the following within the retained `Trace
 
 APL body IDs are `10977` on the left and `10540` on the right. The 332 DAN candidates are not a fully validated compartment/function assignment. The audited mushroom-body selection has no populated `receptorType` entries. Actual MB edge counts, transmitter signs, and active sensory-to-MB-to-motor paths still require the connection and neurotransmitter audit described in the plan.
 
-KC, APL, MBON, and PAM/PPL1 types are absent from the current activity registry and consequently use the graded default. Their anatomical inclusion alone does not establish realistic sparse coding or associative learning. The language head currently reads motor neurons, not MBONs.
+KC, APL, MBON, and PAM/PPL1 types are absent from the current activity registry and consequently use the spiking default in mixed mode. This fallback is an engineering assumption, including for APL; it is not evidence that these populations all signal through spikes. Their anatomical inclusion alone does not establish realistic sparse coding or associative learning. The language head currently reads motor neurons, not MBONs.
 
 ### Staged implementation
 
