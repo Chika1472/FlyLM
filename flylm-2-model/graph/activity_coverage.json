@@ -1,0 +1,12 @@
+{
+  "neurons": 165122,
+  "evidence_supported_neurons": 1404,
+  "evidence_spiking_neurons": 4,
+  "evidence_graded_neurons": 1400,
+  "unknown_default_neurons": 163718,
+  "evidence_fraction": 0.008502803987354804,
+  "unmatched_evidence_types": [],
+  "unknown_default": "spiking",
+  "effective_spiking_neurons": 163722,
+  "neuron_mode": "mixed"
+}

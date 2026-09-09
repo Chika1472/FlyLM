@@ -1,0 +1,26 @@
+{
+  "spec": {
+    "kind": "sentencepiece_unigram_byte_fallback_v1",
+    "raw_spec": {
+      "version": 3,
+      "dataset_sha256": "16d43f6c89309caa8aa89bc66df5f45e0ecd337bbb7eef5fa121b7adeeba9d86",
+      "text_field": "form",
+      "renderer": "first_seen_two_speakers_adjacent_1to2_merged_turns_v1",
+      "seed": 42,
+      "validation_fraction": 0.05
+    },
+    "options": {
+      "vocab_size": 4096,
+      "character_coverage": 0.9995,
+      "max_training_pairs": 100000,
+      "max_sentence_length": 16384
+    },
+    "sentencepiece_version": "0.2.1",
+    "selected_pairs_sha256": "d8417d1430fd7c7d064a8f0924403457286857d51a9eb524b6c93ceea0ee72f9",
+    "selected_train_pairs": 100000,
+    "normalization": "identity_no_dummy_prefix_preserve_whitespace",
+    "literal_whitespace_marker": "encode_U2581_as_bytes",
+    "prompt_reply_boundary": "encode_separately"
+  },
+  "sha256": "5c006f4f32d96d0f1ef5bd2ed5e20f69d64b1303188ac09ba0746e2292f73f77"
+}

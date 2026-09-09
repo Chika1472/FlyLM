@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "unresolved": 0,
+    "soma": 140024,
+    "skeleton_branch_representative": 25098,
+    "tosoma_annotation": 0
+  },
+  "requested": 25098,
+  "completed": 25098,
+  "transferred_MiB": 368.146728515625,
+  "seconds": 371.3398933999997,
+  "errors": {}
+}

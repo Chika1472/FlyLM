@@ -1,0 +1,121 @@
+{
+  "source_url": "https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/body-annotations-male-cns-v1.0-minconf-0.5.feather",
+  "sha256": "2177e246113e4cfbf1e7772ec37c6da1955ff22e8063d0b1f833101f99a9a3b2",
+  "bytes": 14483314,
+  "traced": 165122,
+  "groups": {
+    "KC": {
+      "count": 4064,
+      "sides": {
+        "R": 2045,
+        "L": 2019
+      },
+      "types": {
+        "KCg-m": 1342,
+        "KCab-s": 657,
+        "KCab-m": 536,
+        "KCab-c": 488,
+        "KCa'b'-ap2": 291,
+        "KCg-d": 206,
+        "KCa'b'-m": 205,
+        "KCa'b'-ap1": 199,
+        "KCab-p": 129,
+        "KCg-s1": 2,
+        "KCg-s2": 2,
+        "KCg-s3": 2,
+        "KCg-s4": 2,
+        "KC": 2,
+        "KCg": 1
+      }
+    },
+    "APL": {
+      "count": 2,
+      "sides": {
+        "R": 1,
+        "L": 1
+      },
+      "types": {
+        "APL": 2
+      }
+    },
+    "MBON": {
+      "count": 97,
+      "sides": {
+        "R": 49,
+        "L": 48
+      },
+      "types": {
+        "MBON10": 9,
+        "MBON14": 4,
+        "MBON15": 4,
+        "MBON07": 4,
+        "MBON12": 4,
+        "MBON09": 4,
+        "MBON19": 4,
+        "MBON15-like": 4,
+        "MBON25-like": 4,
+        "MBON01": 2,
+        "MBON06": 2,
+        "MBON05": 2,
+        "MBON35": 2,
+        "MBON11": 2,
+        "MBON20": 2,
+        "MBON31": 2,
+        "MBON21": 2,
+        "MBON26": 2,
+        "MBON32": 2,
+        "MBON33": 2,
+        "MBON22": 2,
+        "MBON13": 2,
+        "MBON18": 2,
+        "MBON24": 2,
+        "MBON23": 2,
+        "MBON28": 2,
+        "MBON17": 2,
+        "MBON25": 2,
+        "MBON34": 2,
+        "MBON30": 2,
+        "MBON17-like": 2,
+        "MBON27": 2,
+        "MBON03": 2,
+        "MBON29": 2,
+        "MBON16": 2,
+        "MBON02": 2,
+        "MBON04": 2
+      }
+    },
+    "PAM_PPL1_candidates": {
+      "count": 332,
+      "sides": {
+        "R": 166,
+        "L": 166
+      },
+      "types": {
+        "PAM08": 50,
+        "PAM01": 44,
+        "PAM04": 32,
+        "PAM06": 28,
+        "PAM12": 22,
+        "PAM05": 20,
+        "PAM14": 18,
+        "PAM02": 17,
+        "PAM13": 16,
+        "PAM10": 15,
+        "PAM11": 15,
+        "PAM07": 14,
+        "PAM03": 12,
+        "PAM09": 9,
+        "PAM15": 4,
+        "PPL101": 2,
+        "PPL102": 2,
+        "PPL103": 2,
+        "PPL108": 2,
+        "PPL105": 2,
+        "PPL107": 2,
+        "PPL104": 2,
+        "PPL106": 2
+      }
+    }
+  },
+  "mb_receptorType_nonempty": 0
+}

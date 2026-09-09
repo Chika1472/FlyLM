@@ -1,0 +1,14 @@
+# Private Korean-language corpus; distributed separately.
+/data-example/
+
+# Local scratch work, installed test dependencies, and generated caches.
+/tmp/
+/.ruff_cache/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local credentials and environment configuration.
+.env
+.env.*
+!.env.example

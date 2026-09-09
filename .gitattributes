@@ -1,0 +1,6 @@
+# Preserve exact bytes for checkpoint provenance and hashed model metadata.
+* -text
+flylm-2-model/model.pt filter=lfs diff=lfs merge=lfs -text
+flylm-2-model/graph/count.npy filter=lfs diff=lfs merge=lfs -text
+flylm-2-model/graph/edge_sign.npy filter=lfs diff=lfs merge=lfs -text
+flylm-2-model/graph/src.npy filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,93 @@
+{
+  "evidence": [
+    {
+      "activity": "spiking",
+      "evidence_level": "recorded_type_transfer",
+      "finding": "H2의 활동전위를 직접 기록하였다.",
+      "limitation": "다른 개체의 유형 근거이며 MaleCNS 개체의 직접 측정이 아니다. 역치·불응기는 옮겨오지 않는다.",
+      "locator": "H2 electrophysiology; 국소 운동 자극에 대한 스파이크 기록",
+      "mapping": "MaleCNS type H2와 문헌의 H2를 세포 유형 수준에서 대응시킨다.",
+      "preparation": "성체; H2 전세포 기록",
+      "sex": "이 근거집에서는 성별을 확정하지 않음",
+      "source": "https://doi.org/10.1038/s41586-025-09276-5",
+      "species": "Drosophila melanogaster",
+      "type_name": "H2"
+    },
+    {
+      "activity": "spiking",
+      "evidence_level": "recorded_type_transfer",
+      "finding": "DM1 투사뉴런에서 실제 활동전위를 기록하였다.",
+      "limitation": "암컷의 DM1 유형 근거를 수컷 대응 유형으로 전이한다. 모든 후각 투사뉴런으로 확장하지 않는다.",
+      "locator": "Methods: NP5221-Gal4 DM1 PNs; Fig. 5B",
+      "mapping": "DM1 uniglomerular PN을 MaleCNS DM1_lPN에 대응시키는 해부학적 추론이다.",
+      "preparation": "성체 2–10일; DM1 투사뉴런 전세포 기록",
+      "sex": "female",
+      "source": "https://doi.org/10.1523/JNEUROSCI.0764-09.2009",
+      "species": "Drosophila melanogaster",
+      "type_name": "DM1_lPN"
+    },
+    {
+      "activity": "graded",
+      "evidence_level": "recorded_type_transfer",
+      "finding": "HS의 운동 반응은 연속 막전위 변화로 다룬다. HSN/HSE/HSS 기록을 구별한다.",
+      "limitation": "주된 연속 신호를 근사한다. 모든 조건에서 재생성 사건이 불가능하다는 주장이 아니다. 전기 시냅스는 추가하지 않는다.",
+      "locator": "Introduction; Fig. 5B–D; Methods: male flies",
+      "mapping": "MaleCNS type HSN를 문헌의 동명 HS 유형에만 대응시킨다.",
+      "preparation": "성체 수컷; 생체 내 HS 전세포 기록",
+      "sex": "male",
+      "source": "https://doi.org/10.1038/s41467-024-53173-w",
+      "species": "Drosophila melanogaster",
+      "type_name": "HSN"
+    },
+    {
+      "activity": "graded",
+      "evidence_level": "recorded_type_transfer",
+      "finding": "HS의 운동 반응은 연속 막전위 변화로 다룬다. HSN/HSE/HSS 기록을 구별한다.",
+      "limitation": "주된 연속 신호를 근사한다. 모든 조건에서 재생성 사건이 불가능하다는 주장이 아니다. 전기 시냅스는 추가하지 않는다.",
+      "locator": "Introduction; Fig. 5B–D; Methods: male flies",
+      "mapping": "MaleCNS type HSE를 문헌의 동명 HS 유형에만 대응시킨다.",
+      "preparation": "성체 수컷; 생체 내 HS 전세포 기록",
+      "sex": "male",
+      "source": "https://doi.org/10.1038/s41467-024-53173-w",
+      "species": "Drosophila melanogaster",
+      "type_name": "HSE"
+    },
+    {
+      "activity": "graded",
+      "evidence_level": "recorded_type_transfer",
+      "finding": "HS의 운동 반응은 연속 막전위 변화로 다룬다. HSN/HSE/HSS 기록을 구별한다.",
+      "limitation": "주된 연속 신호를 근사한다. 모든 조건에서 재생성 사건이 불가능하다는 주장이 아니다. 전기 시냅스는 추가하지 않는다.",
+      "locator": "Introduction; Fig. 5B–D; Methods: male flies",
+      "mapping": "MaleCNS type HSS를 문헌의 동명 HS 유형에만 대응시킨다.",
+      "preparation": "성체 수컷; 생체 내 HS 전세포 기록",
+      "sex": "male",
+      "source": "https://doi.org/10.1038/s41467-024-53173-w",
+      "species": "Drosophila melanogaster",
+      "type_name": "HSS"
+    },
+    {
+      "activity": "graded",
+      "evidence_level": "recorded_family_transfer",
+      "finding": "R1–R6의 빛 반응을 연속 전압 신호로 기록한다.",
+      "limitation": "기록된 세포군의 주된 신호 방식을 전이한다. 개별 R1–R6의 매개변수 차이는 보존하지 못한다.",
+      "locator": "Introduction; Representative Results: R1–R6 voltage responses",
+      "mapping": "MaleCNS의 통합 라벨 R1-R6에만 적용한다. R7/R8에는 전파하지 않는다.",
+      "preparation": "생체 내 R1–R6 광수용체 세포 내 전압 기록",
+      "sex": "이 근거집에서는 성별을 확정하지 않음",
+      "source": "https://doi.org/10.3791/54142",
+      "species": "Drosophila melanogaster",
+      "type_name": "R1-R6"
+    }
+  ],
+  "mode": "mixed",
+  "parameters": "engineering_assumptions",
+  "state_layout": [
+    "membrane",
+    "synaptic_signal",
+    "adaptation",
+    "refractory_ticks"
+  ],
+  "time_unit": "simulation_tick_not_ms",
+  "unknown_activity": "spiking",
+  "version": "flylm2_activity_evidence_2026-09-08_v2"
+}
