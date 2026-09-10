@@ -1,0 +1,174 @@
+bodyId,type,superclass,class,subclass,somaSide,rootSide,somaNeuromere,entryNerve,exitNerve,assignedOlHex1,assignedOlHex2,mancType,mancBodyid
+800061,Tergopleural/Pleural promotor MN,vnc_motor,,fl,L,,T1,,DProN,,,Tergopleural/Pleural promotor MN,12686.0
+800636,Ti extensor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ti extensor MN,12704.0
+800718,DLMn c-f,vnc_motor,,wm,L,,T1,,PDMNa,,,DLMn c-f,10088.0
+800890,DLMn c-f,vnc_motor,,wm,L,,T1,,PDMNa,,,DLMn c-f,10014.0
+801079,Sternotrochanter MN,vnc_motor,,fl,R,,T1,,VProN,,,Sternotrochanter MN,18440.0
+801173,Tergopleural/Pleural promotor MN,vnc_motor,,fl,L,,T1,,DProN,,,Tergopleural/Pleural promotor MN,19319.0
+801319,MNnm13,vnc_motor,,nm,L,,T1,,DProN,,,MNnm13,13974.0
+801469,Sternal anterior rotator MN,vnc_motor,,fl,R,,T1,,VProN,,,Sternal anterior rotator MN,16209.0
+801678,ADNM1 MN,vnc_motor,,nm,R,,T1,,CvN,,,ADNM1,20860.0
+801685,Sternotrochanter MN,vnc_motor,,fl,L,,T1,,VProN,,,Sternotrochanter MN,100515.0
+801824,Tergopleural/Pleural promotor MN,vnc_motor,,fl,R,,T1,,DProN,,,Tergopleural/Pleural promotor MN,11706.0
+801895,DLMn c-f,vnc_motor,,wm,L,,T1,,PDMNa,,,DLMn c-f,10592.0
+801915,Sternal posterior rotator MN,vnc_motor,,fl,L,,T1,,ProAN,,,Sternal posterior rotator MN,19667.0
+801918,Sternal anterior rotator MN,vnc_motor,,fl,R,,T1,,VProN,,,Sternal anterior rotator MN,13300.0
+801998,DLMn c-f,vnc_motor,,wm,R,,T1,,PDMNa,,,DLMn c-f,10361.0
+802072,Tergopleural/Pleural promotor MN,vnc_motor,,fl,R,,T1,,DProN,,,Tergopleural/Pleural promotor MN,12628.0
+802151,MNnm03,vnc_motor,,nm,R,,T1,,DProN,,,MNnm03,45594.0
+802152,MNnm08,vnc_motor,,nm,R,,T1,,DProN,,,MNnm08,11954.0
+802361,Sternotrochanter MN,vnc_motor,,fl,L,,T1,,VProN,,,Sternotrochanter MN,18579.0
+802509,Pleural remotor/abductor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Pleural remotor/abductor MN,12096.0
+802544,DLMn c-f,vnc_motor,,wm,R,,T1,,PDMNa,,,DLMn c-f,162240.0
+802552,Tergotr. MN,vnc_motor,,fl,L,,T1,,VProN,,,Tergotr. MN,19652.0
+802781,MNnm08,vnc_motor,,nm,L,,T1,,DProN,,,MNnm08,11059.0
+802923,MNnm03,vnc_motor,,nm,L,,T1,,DProN,,,MNnm03,156960.0
+803013,DLMn c-f,vnc_motor,,wm,L,,T1,,PDMNa,,,DLMn c-f,10892.0
+803048,DLMn c-f,vnc_motor,,wm,R,,T1,,PDMNa,,,DLMn c-f,18309.0
+803237,Tergotr. MN,vnc_motor,,fl,L,,T1,,VProN,,,Tergotr. MN,166309.0
+803314,Pleural remotor/abductor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Pleural remotor/abductor MN,16419.0
+803378,MNnm11,vnc_motor,,nm,R,,T1,,DProN,,,MNnm11,23937.0
+803412,Tr extensor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Tr extensor MN,11657.0
+803558,MNnm10,vnc_motor,,nm,R,,T1,,DProN,,,MNnm10,11033.0
+803582,MNnm10,vnc_motor,,nm,L,,T1,,DProN,,,MNnm10,178721.0
+803698,Sternotrochanter MN,vnc_motor,,fl,R,,T1,,VProN,,,Sternotrochanter MN,13819.0
+803765,MNnm09,vnc_motor,,nm,R,,T1,,DProN,,,MNnm09,24149.0
+803803,Pleural remotor/abductor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Pleural remotor/abductor MN,13628.0
+803830,Fe reductor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Fe reductor MN,24050.0
+804245,FNM2,vnc_motor,,nm,R,,T1,,DProN,,,FNM2,14079.0
+804257,Ti extensor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ti extensor MN,13115.0
+804343,ADNM2 MN,vnc_motor,,nm,L,,T1,,CvN,,,ADNM2,14549.0
+804465,Tergotr. MN,vnc_motor,,fl,L,,T1,,VProN,,,Tergotr. MN,21753.0
+804851,Sternal posterior rotator MN,vnc_motor,,fl,L,,T1,,ProAN,,,Sternal posterior rotator MN,17546.0
+804866,Tergotr. MN,vnc_motor,,fl,R,,T1,,VProN,,,Tergotr. MN,19443.0
+804941,Fe reductor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Fe reductor MN,156857.0
+805165,"DVMn 3a, b",vnc_motor,,wm,L,,T1,,PDMNa,,,"DVMn 3a, b",13228.0
+805309,ltm2-femur MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm2-femur MN,20612.0
+805313,Pleural remotor/abductor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Pleural remotor/abductor MN,21241.0
+805410,Sternal posterior rotator MN,vnc_motor,,fl,R,,T1,,ProAN,,,Sternal posterior rotator MN,13942.0
+805598,Fe reductor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Fe reductor MN,21944.0
+805741,Tergotr. MN,vnc_motor,,fl,L,,T1,,VProN,,,Tergotr. MN,155633.0
+805745,Tergopleural/Pleural promotor MN,vnc_motor,,fl,R,,T1,,DProN,,,Tergopleural/Pleural promotor MN,20386.0
+806403,MNnm14,vnc_motor,,nm,R,,T1,,DProN,,,MNnm14,15049.0
+806489,MNnm14,vnc_motor,,nm,L,,T1,,DProN,,,MNnm14,153756.0
+806599,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,101043.0
+806898,Fe reductor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Fe reductor MN,18983.0
+806923,Sternal anterior rotator MN,vnc_motor,,fl,L,,T1,,VProN,,,Sternal anterior rotator MN,26566.0
+807165,Ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ti flexor MN,12134.0
+807281,Tergopleural/Pleural promotor MN,vnc_motor,,fl,L,,T1,,DProN,,,Tergopleural/Pleural promotor MN,12396.0
+807873,Acc. tr flexor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Acc. tr flexor MN,16400.0
+807906,Tr extensor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Tr extensor MN,19929.0
+808011,Sternal posterior rotator MN,vnc_motor,,fl,R,,T1,,ProAN,,,Sternal posterior rotator MN,21241.0
+808640,Sternal posterior rotator MN,vnc_motor,,fl,L,,T1,,ProAN,,,Sternal posterior rotator MN,29689.0
+809912,Ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ti flexor MN,17133.0
+810098,Ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ti flexor MN,14848.0
+810535,Tergopleural/Pleural promotor MN,vnc_motor,,fl,R,,T1,,DProN,,,Tergopleural/Pleural promotor MN,13464.0
+810541,Ta levator MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ta levator MN,22358.0
+810639,Tr flexor MN,vnc_motor,,fl,L,,T1,,VProN,,,Tr flexor MN,19771.0
+811652,Fe reductor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Fe reductor MN,11226.0
+812111,Fe reductor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Fe reductor MN,13920.0
+813480,Sternal adductor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Sternal adductor MN,155853.0
+813566,Fe reductor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Fe reductor MN,12891.0
+813696,ADNM2 MN,vnc_motor,,nm,R,,T1,,CvN,,,ADNM2,17653.0
+814163,Fe reductor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Fe reductor MN,14949.0
+814489,Tr flexor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Tr flexor MN,163686.0
+815246,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,17885.0
+815344,Ti extensor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ti extensor MN,10256.0
+815678,Ti extensor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ti extensor MN,22126.0
+815854,Sternal adductor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Sternal adductor MN,21718.0
+816215,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,18412.0
+816404,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,23698.0
+816648,Tr flexor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Tr flexor MN,39951.0
+817026,MNxm01,vnc_motor,,xm,L,,T1,,PDMNa,,,MNxm01,12009.0
+817210,Ta levator MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ta levator MN,16346.0
+817283,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,15023.0
+817347,Tergotr. MN,vnc_motor,,fl,R,,T1,,VProN,,,Tergotr. MN,23553.0
+817509,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,12761.0
+817595,Fe reductor MN,vnc_motor,,fl,R,,T1,,VProN,,,Fe reductor MN,29484.0
+817640,Tr flexor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Tr flexor MN,14783.0
+817655,Ta depressor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ta depressor MN,
+818057,Ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ti flexor MN,15321.0
+818098,MNxm01,vnc_motor,,xm,R,,T1,,PDMNa,,,MNxm01,11372.0
+818389,Tr flexor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Tr flexor MN,23299.0
+818553,ltm1-tibia MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm1-tibia MN,13952.0
+818719,Tr flexor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Tr flexor MN,41353.0
+818842,Tr extensor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Tr extensor MN,27028.0
+819278,Ta depressor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ta depressor MN,18554.0
+819384,Ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ti flexor MN,17885.0
+819869,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,13397.0
+820110,Ta levator MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ta levator MN,19751.0
+820130,Tr flexor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Tr flexor MN,41933.0
+820668,Tr flexor MN,vnc_motor,,fl,R,,T1,,VProN,,,Tr flexor MN,19886.0
+820896,Ta levator MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ta levator MN,15446.0
+821291,Acc. tr flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. tr flexor MN,25475.0
+821635,Ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ti flexor MN,13399.0
+822047,ltm1-tibia MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm1-tibia MN,19092.0
+822092,ltm MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm MN,24139.0
+822274,ltm MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm MN,14069.0
+823168,Tr flexor MN,vnc_motor,,fl,L,,T1,,VProN,,,Tr flexor MN,16963.0
+823281,Tr flexor MN,vnc_motor,,fl,L,,T1,,VProN,,,Tr flexor MN,153142.0
+825516,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,29554.0
+825721,Ta depressor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ta depressor MN,15434.0
+827188,Ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ti flexor MN,
+828939,Tr flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Tr flexor MN,17226.0
+830039,ltm2-femur MN,vnc_motor,,fl,R,,T1,,ProLN,,,ltm2-femur MN,17050.0
+833140,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,16897.0
+834952,"MNnm07,MNnm12",vnc_motor,,nm,R,,T1,,DProN,,,"MNnm07,MNnm12",15789.0
+835074,Fe reductor MN,vnc_motor,,fl,R,,T1,,VProN,,,Fe reductor MN,28884.0
+837745,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,15367.0
+838321,Tr extensor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Tr extensor MN,14536.0
+853504,"MNnm07,MNnm12",vnc_motor,,nm,L,,T1,,DProN,,,"MNnm07,MNnm12",24975.0
+860084,ltm MN,vnc_motor,,fl,R,,T1,,ProLN,,,ltm MN,11786.0
+867630,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,13156.0
+903010,Tr flexor MN,vnc_motor,,fl,R,,T1,,ProAN,,,Tr flexor MN,21612.0
+903152,ADNM1 MN,vnc_motor,,nm,L,,T1,,CvN,,,ADNM1,10407.0
+903153,MNnm13,vnc_motor,,nm,R,,T1,,DProN,,,MNnm13,15244.0
+903298,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,16632.0
+905210,MNnm11,vnc_motor,,nm,L,,T1,,DProN,,,MNnm11,102542.0
+905617,MNnm09,vnc_motor,,nm,L,,T1,,DProN,,,MNnm09,12603.0
+906612,"DVMn 3a, b",vnc_motor,,wm,L,,T1,,PDMNa,,,"DVMn 3a, b",13586.0
+909521,Tergotr. MN,vnc_motor,,fl,R,,T1,,VProN,,,Tergotr. MN,37234.0
+909618,Acc. tr flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. tr flexor MN,26588.0
+909713,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,16492.0
+909831,Ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ti flexor MN,14798.0
+910334,ltm MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm MN,47642.0
+911134,Acc. tr flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. tr flexor MN,23048.0
+911453,ltm MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm MN,173560.0
+914655,Tr flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Tr flexor MN,20673.0
+919509,Sternal anterior rotator MN,vnc_motor,,fl,L,,T1,,VProN,,,Sternal anterior rotator MN,17176.0
+924189,ltm MN,vnc_motor,,fl,R,,T1,,ProLN,,,ltm MN,154803.0
+924716,Tergotr. MN,vnc_motor,,fl,R,,T1,,VProN,,,Tergotr. MN,
+928688,FNM2,vnc_motor,,nm,L,,T1,,DProN,,,FNM2,24975.0
+932321,"DVMn 3a, b",vnc_motor,,wm,R,,T1,,PDMNa,,,"DVMn 3a, b",11776.0
+934091,Tergopleural/Pleural promotor MN,vnc_motor,,fl,L,,T1,,DProN,,,Tergopleural/Pleural promotor MN,13490.0
+1050005026,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,154804.0
+1050011487,"MNnm07,MNnm12",vnc_motor,,nm,L,,T1,,DProN,,,"MNnm07,MNnm12",26924.0
+1050013851,ltm MN,vnc_motor,,fl,R,,T1,,ProLN,,,ltm MN,15317.0
+1050014552,DLMn c-f,vnc_motor,,wm,R,,T1,,PDMNa,,,DLMn c-f,
+1050015101,ltm MN,vnc_motor,,fl,R,,T1,,ProLN,,,ltm MN,27078.0
+1050031705,Ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ti flexor MN,
+1050045395,"DVMn 3a, b",vnc_motor,,wm,R,,T1,,PDMNa,,,"DVMn 3a, b",162114.0
+1050091581,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,18963.0
+1050111955,Ta levator MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ta levator MN,25674.0
+1050115387,Acc. ti flexor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Acc. ti flexor MN,15791.0
+1050126678,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,14824.0
+1050156705,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,19048.0
+1050189039,Ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ti flexor MN,13283.0
+1050211750,"MNnm07,MNnm12",vnc_motor,,nm,R,,T1,,DProN,,,"MNnm07,MNnm12",18717.0
+1050248133,Ta depressor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ta depressor MN,20373.0
+1050251718,ltm2-femur MN,vnc_motor,,fl,R,,T1,,ProLN,,,ltm2-femur MN,15720.0
+1050268065,Acc. ti flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. ti flexor MN,20605.0
+1050306082,Acc. tr flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. tr flexor MN,13563.0
+1050335829,Sternal posterior rotator MN,vnc_motor,,fl,L,,T1,,ProAN,,,Sternal posterior rotator MN,
+1050340850,,vnc_motor,,fl,R,,T1,,ProLN,,,,16658.0
+1050349786,Acc. tr flexor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Acc. tr flexor MN,22729.0
+1050380236,Ta depressor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ta depressor MN,26658.0
+1050403926,Ta depressor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ta depressor MN,15023.0
+1050615112,ltm2-femur MN,vnc_motor,,fl,L,,T1,,ProLN,,,ltm2-femur MN,15818.0
+1050660827,Ta depressor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ta depressor MN,166374.0
+1050815462,Ta depressor MN,vnc_motor,,fl,R,,T1,,ProLN,,,Ta depressor MN,26777.0
+1051062549,Ta depressor MN,vnc_motor,,fl,L,,T1,,ProLN,,,Ta depressor MN,
+1051367796,Tr flexor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Tr flexor MN,158694.0
+1051670893,Tr flexor MN,vnc_motor,,fl,L,,T1,,ProAN,,,Tr flexor MN,26613.0
+1052407897,,vnc_motor,,fl,R,,T1,,ProLN,,,,16203.0
+1057471940,ltm1-tibia MN,vnc_motor,,fl,R,,T1,,ProLN,,,ltm1-tibia MN,166385.0
