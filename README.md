@@ -10,6 +10,31 @@ The anatomical substrate is **MaleCNS v1.0**, covering the adult male *Drosophil
 
 **Research status:** FlyLM is an experimental implementation. Language competence, biological memory fidelity, and benefits over conventional language models remain empirical questions. Text-to-sensory and motor-to-token mappings are learned engineering interfaces; they do not imply that flies possess a language system. The updated notebooks contain saved execution outputs, including partial training diagnostics and an inference example. These are not a completed comparative evaluation, so this README does not present them as benchmark results.
 
+## FlyLM-3: visual input and foreleg pen output
+
+FlyLM-3 presents character images to mapped R1–R6 photoreceptors and reads right-foreleg motor activity to predict the next character as a pen trajectory. Generated ink is rasterized and fed back to the eyes. This visual/pen interface differs from the token embeddings and vocabulary decoder described for FlyLM-1/2 below.
+
+| Version | Training | Inference | Purpose |
+|---|---|---|---|
+| FlyLM-3.1 | [Colab training](flylm-3/flylm-3-1-train.ipynb) | [Colab inference](flylm-3/flylm-3-1-infer.ipynb) | Cleaned Tiny Shakespeare and A100-oriented sparse optimization |
+| FlyLM-3 | [Training](flylm-3/flylm-3-training.ipynb) | [Inference](flylm-3/flylm-3-inferance.ipynb) | Original visual next-character experiment |
+| FlyLM-3 overfit test | [Training](flylm-3/FlyLM-3-overfit-test-training.ipynb) | [Inference](flylm-3/FlyLM-3-overfit-test-inference.ipynb) | Controlled writing/overfitting experiment |
+
+FlyLM-3.1 uppercases Tiny Shakespeare, converts `?` and `!` to `.`, normalizes whitespace to spaces, and removes other characters. Its alphabet contains exactly **A–Z, literal space and period**. The visible underscore is a drawing for the space token, not an additional text symbol.
+
+For FlyLM-3.1, select a GPU runtime in Google Colab (A100 recommended) and run the training notebook from the top. The preflight measures the assigned GPU and checks the full graph before training. Active files are stored under `/content/flylm31_work`; enable `SAVE_TO_DRIVE=True` for persistent backups or download the complete run ZIP. In inference, set `BUNDLE_DIR` to the extracted run directory; enable `MOUNT_DRIVE=True` when using a Drive backup. Keep the checkpoint, graph, visual assets and manifests together.
+
+The sparse implementation keeps FP32 arithmetic and the anatomical edges, using CSR/SDDMM derivatives, cached transpose structure, batched independent work and fused CUDA Adam. The notebook documents local checks and timing; A100 throughput and language learning must be evaluated on the actual run. A small trajectory loss can still correspond to an unreadable average drawing.
+
+### Saved pen replays
+
+| Demonstration | Offline HTML replay | Rendered video |
+|---|---|---|
+| HELLO WORLD | [Download replay](flywrite3_27_HELLO_WORLD.html) | [MP4](output/flylm_HELLO_WORLD.mp4) |
+| SINGULARITY IS NEAR | [Download replay](flywrite3_27_SINGULARITY_IS_NEAR.html) | [MP4](output/flylm_SINGULARITY_IS_NEAR.mp4) |
+
+Download the HTML files and open them locally for interactive playback. These saved visualizations are demonstration artifacts, not a comparative language-model evaluation.
+
 ## FlyLM-2
 
 FlyLM-2 extends the earlier byte-level, graded-dynamics model with **SentencePiece Unigram tokenization and mixed graded/spiking neuronal dynamics**. It preserves the graph, anatomical input/output selection, dialogue-level data split, and response-only training objective.
